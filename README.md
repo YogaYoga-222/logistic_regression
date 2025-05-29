@@ -40,8 +40,8 @@ pip install scikit-learn
 # Run the Programs :
 
 ```bash
-python logistic_regression_iris.py
-python logistic_regression_breast_cancer.py
+python3 python logistic_regression_iris.py
+python3 python logistic_regression_breast_cancer.py
 ```
 
 # Sample Output :
