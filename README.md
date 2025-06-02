@@ -41,6 +41,8 @@ pip install scikit-learn
 
 ```bash
 python3 python logistic_regression_iris.py
+```
+```bash
 python3 python logistic_regression_breast_cancer.py
 ```
 
