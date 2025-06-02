@@ -64,6 +64,7 @@ python3 logistic_regression_spam_detection.py
 
 ## Iris Classification
 ```
+Output for iris dataset
 Accuracy: 1.0
 Confusion Matrix:
 [[10  0]
