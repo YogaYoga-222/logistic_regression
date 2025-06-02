@@ -60,9 +60,6 @@ Classification Report:
 ```
 ```
 Breast Cancer Classification
-lua
-Copy
-Edit
 Accuracy: 0.96
 Confusion Matrix:
 [[70  2]
