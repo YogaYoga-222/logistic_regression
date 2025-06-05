@@ -51,10 +51,10 @@ pip install scikit-learn
 # Run the Programs :
 
 ```bash
-python3 python logistic_regression_iris.py
+python3 logistic_regression_iris.py
 ```
 ```bash
-python3 python logistic_regression_breast_cancer.py
+python3 logistic_regression_breast_cancer.py
 ```
 ```bash
 python3 logistic_regression_spam_detection.py
