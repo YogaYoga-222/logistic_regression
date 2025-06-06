@@ -10,7 +10,8 @@ Each program is written in its own Python file for better clarity and organizati
 
 - `logistic_regression_iris.py`: Iris flower classification
 - `logistic_regression_breast_cancer.py`: Breast cancer prediction
-- `logistic_regression_spam_detection.py`: Spam vs. ham message classification 
+- `logistic_regression_spam_detection.py`: Spam vs. ham message classification
+- `binary_logistic_regression.py`: Predict if a student passes based on study hours 
 
 ---
 
@@ -40,6 +41,14 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
+### 4. Student Pass Prediction
+
+- **Dataset**: Custom simple dataset  
+- **Target**: Predict whether a student will pass based on hours studied  
+- **Goal**: Demonstrate binary classification using logistic regression  
+
+---
+
 ## Required Libraries
 
 Before running the programs, make sure you have the following Python library installed:
@@ -59,6 +68,9 @@ python3 logistic_regression_breast_cancer.py
 ```bash
 python3 logistic_regression_spam_detection.py
 ```
+```bash
+python3 binary_logistic_regression.py
+```
 
 # Sample Output :
 
@@ -75,6 +87,7 @@ Classification Report:
            0       1.00      1.00      1.00        10
            1       1.00      1.00      1.00        10
 ```
+## Breast Cancer Classification
 ```
 Breast Cancer Classification
 Accuracy: 0.96
@@ -87,6 +100,7 @@ Classification Report:
            0       0.97      0.97      0.97        72
            1       0.95      0.95      0.95        44
 ```
+## Spam Detection
 ```
 Accuracy: 0.67
 Confusion Matrix:
@@ -98,12 +112,20 @@ Classification Report:
            0       1.00      0.50      0.67         2
            1       0.50      1.00      0.67         1
 ```
+## Student Pass Prediction
+```
+Accuracy: 1.0
+Test Data Predictions: [0, 1, 0]
+```
+
 
 # What You Will Learn
 
 * How Logistic Regression works for binary and multi-class classification
 
-* How to use scikit-learn built-in datasets and text data
+* How to use scikit-learn’s built-in datasets and custom data
+
+* How to work with both numerical and text inputs
 
 * How to split datasets into training/testing sets
 
