@@ -11,7 +11,7 @@ Each program is written in its own Python file for better clarity and organizati
 - `logistic_regression_iris.py`: Iris flower classification
 - `logistic_regression_breast_cancer.py`: Breast cancer prediction
 - `logistic_regression_spam_detection.py`: Spam vs. ham message classification
-- `binary_logistic_regression.py`: Predict if a student passes based on study hours 
+- `binary_pass_prediction.py`: Predict if a student passes based on study hours 
 
 ---
 
@@ -69,7 +69,7 @@ python3 logistic_regression_breast_cancer.py
 python3 logistic_regression_spam_detection.py
 ```
 ```bash
-python3 binary_logistic_regression.py
+python3 binary_pass_prediction.py
 ```
 
 # Sample Output :
