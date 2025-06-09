@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **four classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **six classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -11,7 +11,9 @@ Each program is written in its own Python file for better clarity and organizati
 - `logistic_regression_iris.py`: Iris flower classification
 - `logistic_regression_breast_cancer.py`: Breast cancer prediction
 - `logistic_regression_spam_detection.py`: Spam vs. ham message classification
-- `binary_pass_prediction.py`: Predict if a student passes based on study hours 
+- `binary_pass_prediction.py`: Predict if a student passes based on study hours
+- `binary_employee_attrition.py`: Predict if an employee will leave the company  
+- `binary_purchase_prediction.py`: Predict if a person will purchase a product 
 
 ---
 
@@ -45,7 +47,22 @@ Each program is written in its own Python file for better clarity and organizati
 
 - **Dataset**: Custom simple dataset  
 - **Target**: Predict whether a student will pass based on hours studied  
-- **Goal**: Demonstrate binary classification using logistic regression  
+- **Goal**: Demonstrate binary classification using logistic regression
+
+---
+
+### 5. Employee Attrition Prediction
+
+- **Dataset**: Custom simple dataset  
+- **Target**: Predict whether an employee will leave the company  
+- **Goal**: Show how logistic regression can be used in HR analytics  
+
+---
+
+### 6. Purchase Prediction
+- **Dataset**: Custom simple dataset  
+- **Target**: Predict whether a person will buy a product based on age and salary  
+- **Goal**: Use logistic regression for marketing-based decisions  
 
 ---
 
@@ -70,6 +87,12 @@ python3 logistic_regression_spam_detection.py
 ```
 ```bash
 python3 binary_pass_prediction.py
+```
+```bash
+python3 binary_employee_attrition.py
+```
+```bash
+python3 binary_purchase_prediction.py
 ```
 
 # Sample Output :
@@ -116,6 +139,46 @@ Classification Report:
 ```
 Accuracy: 1.0
 Test Data Predictions: [0, 1, 0]
+```
+## Employee Attrition Prediction
+```
+Accuracy: 1.0
+
+Confusion Matrix:
+ [[2 0]
+ [0 1]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         2
+           1       1.00      1.00      1.00         1
+
+    accuracy                           1.00         3
+   macro avg       1.00      1.00      1.00         3
+weighted avg       1.00      1.00      1.00         3
+
+
+Test Data Predictions: [0, 0, 1]
+```
+## Purchase Prediction
+```
+Purchase Prediction
+Accuracy: 1.0
+Confusion Matrix:
+ [[2 0]
+ [0 1]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         2
+           1       1.00      1.00      1.00         1
+
+    accuracy                           1.00         3
+   macro avg       1.00      1.00      1.00         3
+weighted avg       1.00      1.00      1.00         3
+
+Test Data Predictions: [0, 0, 1]
 ```
 
 
