@@ -71,6 +71,7 @@ Each program is written in its own Python file for better clarity and organizati
 - **Dataset**: Personality traits dataset (custom or collected)
 - **Target**: Predict whether a person is an Introvert or Extrovert
 - **Goal**: Apply logistic regression to classify individuals based on social behavior and habits (like time spent alone, stage fear, and event participation)
+- **Note**: Confirm you loaded the personality_data.csv in `binary_introvert_vs_extrovert.py`
 
 ---
 
