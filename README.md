@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **six classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **seven classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -13,7 +13,8 @@ Each program is written in its own Python file for better clarity and organizati
 - `logistic_regression_spam_detection.py`: Spam vs. ham message classification
 - `binary_pass_prediction.py`: Predict if a student passes based on study hours
 - `binary_employee_attrition.py`: Predict if an employee will leave the company  
-- `binary_purchase_prediction.py`: Predict if a person will purchase a product 
+- `binary_purchase_prediction.py`: Predict if a person will purchase a product
+- `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
 
 ---
 
@@ -66,6 +67,13 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
+### 7. Introvert vs Extrovert Prediction 
+- **Dataset**: Personality traits dataset (custom or collected)
+- **Target**: Predict whether a person is an Introvert or Extrovert
+- **Goal**: Apply logistic regression to classify individuals based on social behavior and habits (like time spent alone, stage fear, and event participation)
+
+---
+
 ## Required Libraries
 
 Before running the programs, make sure you have the following Python library installed:
@@ -93,6 +101,9 @@ python3 binary_employee_attrition.py
 ```
 ```bash
 python3 binary_purchase_prediction.py
+```
+```bash
+python3 binary_introvert_vs_extrovert.py
 ```
 
 # Sample Output :
@@ -180,7 +191,22 @@ weighted avg       1.00      1.00      1.00         3
 
 Test Data Predictions: [0, 0, 1]
 ```
+## Introvert VS Extrovert
+```
+Accuracy: 0.9220430107526881
+Confusion Matrix:
+ [[341  20]
+ [ 38 345]]
+Classification Report:
+               precision    recall  f1-score   support
 
+           0       0.90      0.94      0.92       361
+           1       0.95      0.90      0.92       383
+
+    accuracy                           0.92       744
+   macro avg       0.92      0.92      0.92       744
+weighted avg       0.92      0.92      0.92       744
+```
 
 # What You Will Learn
 
