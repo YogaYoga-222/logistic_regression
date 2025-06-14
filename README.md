@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **seven classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Eight classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -15,6 +15,7 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_employee_attrition.py`: Predict if an employee will leave the company  
 - `binary_purchase_prediction.py`: Predict if a person will purchase a product
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
+- `multinomial_predict_rating.py`:      
 
 ---
 
@@ -74,6 +75,12 @@ Each program is written in its own Python file for better clarity and organizati
 - **Note**: Confirm you loaded the personality_data.csv in `binary_introvert_vs_extrovert.py`
 
 ---
+### 8. Vacation Place Rating Prediction
+- **Dataset**: Custom data with 10 records
+- **Target**: Predict a vacation spot’s rating (1–5 stars)
+- **Goal**: Use Multinomial Logistic Regression to predict the rating of a place based on - Budget, Expected Hotel Cost, Travel Time, Feel-Good Score, Weather Condition
+
+---
 
 ## Required Libraries
 
@@ -105,6 +112,9 @@ python3 binary_purchase_prediction.py
 ```
 ```bash
 python3 binary_introvert_vs_extrovert.py
+```
+```bash
+python3 multinomial_predict_rating.py
 ```
 
 # Sample Output :
@@ -207,6 +217,18 @@ Classification Report:
     accuracy                           0.92       744
    macro avg       0.92      0.92      0.92       744
 weighted avg       0.92      0.92      0.92       744
+```
+## Vacation Place Rating Prediction
+```
+--- Vacation Rating Predictor ---
+Total budget (₹): 5000
+Expected hotel cost (₹): 3000
+Travel time (in hours): 6
+Feel-good rating (1-10): 3
+Weather (1=Cool, 2=Moderate, 3=Hot): 2
+
+ Predicted Rating: 2 Star(s)
+ Confidence: 77.43%
 ```
 
 # What You Will Learn
