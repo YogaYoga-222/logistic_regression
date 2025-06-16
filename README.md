@@ -15,8 +15,8 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_employee_attrition.py`: Predict if an employee will leave the company  
 - `binary_purchase_prediction.py`: Predict if a person will purchase a product
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
-- `multinomial_predict_rating.py`:
-- `multinomial_academic_major_prediction.py`:     
+- `multinomial_predict_rating.py`: Predict vacation place ratings (1–5 stars)
+- `multinomial_academic_major_prediction.py`: Predict student’s academic major   
 
 ---
 
@@ -84,10 +84,10 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-### 9. 
--
--
--
+### 9. Academic Major Prediction
+- **Dataset**: Based on subject scores and student interests
+- **Target**: Predict the most suitable academic major for a student
+- **Goal**: Use logistic regression to predict a student’s major based on their marks in Math, Biology, English, and History, and their interest in Science and Art
 
 ---
 
@@ -242,7 +242,7 @@ Weather (1=Cool, 2=Moderate, 3=Hot): 2
  Predicted Rating: 2 Star(s)
  Confidence: 77.43%
 ```
-##
+##  Academic Major Prediction
 ```
 --- Academic Major Predictor ---
 Math Score: 90
