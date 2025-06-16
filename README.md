@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **Eight classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Nine classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -15,7 +15,8 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_employee_attrition.py`: Predict if an employee will leave the company  
 - `binary_purchase_prediction.py`: Predict if a person will purchase a product
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
-- `multinomial_predict_rating.py`:      
+- `multinomial_predict_rating.py`:
+- `multinomial_academic_major_prediction.py`:     
 
 ---
 
@@ -75,10 +76,18 @@ Each program is written in its own Python file for better clarity and organizati
 - **Note**: Confirm you loaded the personality_data.csv in `binary_introvert_vs_extrovert.py`
 
 ---
+
 ### 8. Vacation Place Rating Prediction
 - **Dataset**: Custom data with 10 records
 - **Target**: Predict a vacation spot’s rating (1–5 stars)
 - **Goal**: Use Multinomial Logistic Regression to predict the rating of a place based on - Budget, Expected Hotel Cost, Travel Time, Feel-Good Score, Weather Condition
+
+---
+
+### 9. 
+-
+-
+-
 
 ---
 
@@ -115,6 +124,9 @@ python3 binary_introvert_vs_extrovert.py
 ```
 ```bash
 python3 multinomial_predict_rating.py
+```
+```bash
+python3 multinomial_academic_major_prediction.py
 ```
 
 # Sample Output :
@@ -229,6 +241,19 @@ Weather (1=Cool, 2=Moderate, 3=Hot): 2
 
  Predicted Rating: 2 Star(s)
  Confidence: 77.43%
+```
+##
+```
+--- Academic Major Predictor ---
+Math Score: 90
+Biology Score: 95
+English Score: 92
+History Score: 85
+Interest in Science? (1 = Yes, 0 = No): 1
+Interest in Art? (1 = Yes, 0 = No): 0
+
+ Predicted Major: Engineering
+ Confidence: 96.17%
 ```
 
 # What You Will Learn
