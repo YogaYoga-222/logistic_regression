@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **Nine classification problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Ten Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -16,7 +16,8 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_purchase_prediction.py`: Predict if a person will purchase a product
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
 - `multinomial_predict_rating.py`: Predict vacation place ratings (1–5 stars)
-- `multinomial_academic_major_prediction.py`: Predict student’s academic major   
+- `multinomial_academic_major_prediction.py`: Predict student’s academic major
+- `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance 
 
 ---
 
@@ -91,12 +92,23 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
+### 10. Student Grade Prediction
+- **Dataset**: Student marks and attendance
+- **Target**: Predict the grade (F to O)
+- **Goal**: Predict a student's grade using marks and attendance. If attendance is below 70%, the grade is 'F'. The model uses ordinal logistic regression to do this.
+
+---
+
 ## Required Libraries
 
 Before running the programs, make sure you have the following Python library installed:
 
 ```bash
 pip install scikit-learn
+```
+For Students Grade Prediction (`ordinal_grade_predictor.py`)
+```bash
+pip install numpy pandas scikit-learn statsmodels
 ```
 
 # Run the Programs :
@@ -127,6 +139,9 @@ python3 multinomial_predict_rating.py
 ```
 ```bash
 python3 multinomial_academic_major_prediction.py
+```
+```bash
+python3 ordinal_grade_predictor.py
 ```
 
 # Sample Output :
@@ -254,6 +269,13 @@ Interest in Art? (1 = Yes, 0 = No): 0
 
  Predicted Major: Engineering
  Confidence: 96.17%
+```
+## Students Grade Prediction
+```
+Enter your marks (0 to 100): 85
+Enter your attendance (0 to 100): 92
+
+Predicted Grade: A+
 ```
 
 # What You Will Learn
