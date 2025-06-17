@@ -41,3 +41,42 @@ try:
         print("Marks and attendance must be between 0 and 100.")
 except ValueError:
     print("Please enter valid numbers.")
+
+
+
+
+
+
+
+# import pandas as pd
+# from sklearn.linear_model import LinearRegression
+
+# # Load your CSV file
+# df = pd.read_csv("/home/stemland/Documents/Students_marks.csv")
+
+# # Subjects list
+# subjects = ['Math', 'Science', 'English', 'Tamil', 'Social', 'Physics']
+
+# # Predict Term 3 marks
+# for subject in subjects:
+#     X = df[[f'{subject}_T1', f'{subject}_T2']]
+#     y = 0.4 * df[f'{subject}_T1'] + 0.6 * df[f'{subject}_T2']  # You can change this logic
+#     model = LinearRegression()
+#     model.fit(X, y)
+#     df[f'{subject}_T3_Predicted'] = model.predict(X).round(2)
+
+# # Count passed and failed subjects
+# def count_pass_fail(row):
+#     passed = sum(row[f'{s}_T3_Predicted'] >= 40 for s in subjects)
+#     return pd.Series([passed, len(subjects) - passed])
+
+# df[['Subjects_Passed', 'Subjects_Failed']] = df.apply(count_pass_fail, axis=1)
+
+# # Output results
+# output_cols = ['Name'] + [f'{s}_T3_Predicted' for s in subjects] + ['Subjects_Passed', 'Subjects_Failed']
+# final_df = df[output_cols]
+
+# # Save and display
+# final_df.to_csv("term3_predictions.csv", index=False)
+# print("\n Term 3 Predictions:\n")
+# print(final_df.to_string(index=False))
