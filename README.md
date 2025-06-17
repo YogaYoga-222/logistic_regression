@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **Ten Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Eleven Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -17,7 +17,8 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
 - `multinomial_predict_rating.py`: Predict vacation place ratings (1–5 stars)
 - `multinomial_academic_major_prediction.py`: Predict student’s academic major
-- `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance 
+- `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance
+- `ordinal_marks_predictor.py` : Predict Term 3 subject grades using marks from Term 1 and 2 and show pass/fail summary
 
 ---
 
@@ -99,6 +100,14 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
+### 11. Term 3 Grade and Pass/Fail Prediction
+- **Dataset**: Students_marks.csv with Term 1 and 2 marks
+- **Task**: Predict Term 3 grades for 6 subjects
+- **Goal**: Use ordinal logistic regression to convert marks to grades and count passed/failed subjects
+- **Note**: Confirm you loaded the Students_marks.csv in `ordinal_marks_predictor.py`
+
+---
+
 ## Required Libraries
 
 Before running the programs, make sure you have the following Python library installed:
@@ -106,7 +115,6 @@ Before running the programs, make sure you have the following Python library ins
 ```bash
 pip install scikit-learn
 ```
-For Students Grade Prediction (`ordinal_grade_predictor.py`)
 ```bash
 pip install numpy pandas scikit-learn statsmodels
 ```
@@ -142,6 +150,9 @@ python3 multinomial_academic_major_prediction.py
 ```
 ```bash
 python3 ordinal_grade_predictor.py
+```
+```bash
+python3 ordinal_marks_predicto.py
 ```
 
 # Sample Output :
@@ -276,6 +287,22 @@ Enter your marks (0 to 100): 85
 Enter your attendance (0 to 100): 92
 
 Predicted Grade: A+
+```
+## Term 3 Grade and Pass/Fail Prediction
+```
+Final Predicted Grades and Pass/Fail Summary:
+
+   Name Math_Grade Science_Grade English_Grade Tamil_Grade Social_Grade Physics_Grade  Subjects_Passed  Subjects_Failed
+  Alice          D            B+            B+           A            A            A+                6                0
+    Bob          C            B+             F           A           B+             C                5                1
+Charlie          C             O            B+          B+           B+             A                6                0
+  David          F            B+             F           F            F             D                2                4
+    Eve          C            B+            B+          B+            F            A+                5                1
+  Frank          C            B+             D          B+           B+             C                6                0
+  Grace          A             O             A           A            A            A+                6                0
+ Hannah          F            B+             F           F            F             F                1                5
+    Ivy         B+            B+             D           A            F             C                5                1
+   Jack          C            B+             F          B+            D            A+                5                1
 ```
 
 # What You Will Learn
