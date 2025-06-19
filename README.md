@@ -321,16 +321,16 @@ Charlie          C             O            B+          B+           B+         
  Final Predicted Marks, Ranks and Pass/Fail Summary:
 
    Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
-  Grace       74          90          79        73         78          85          479     1                6                0
-Charlie       53          95          63        67         66          74          418     2                6                0
-  Alice       43          65          66        70         76          85          405     3                6                0
-  Frank       51          63          42        61         69          58          344     4                6                0
-    Bob       54          69          21        72         67          55          338     0                5                1
-  David       39          67          36         1         29          47          219     0                2                4
-    Eve       54          60          63        66          6          89          338     0                5                1
- Hannah       30          68           8        32         28          37          203     0                1                5
-    Ivy       60          68          40        73         20          56          317     0                5                1
-   Jack       53          64          23        64         44          86          334     0                5                1
+  Grace       72          91          79        71         77          85          475     1                6                0
+Charlie       57          97          69        66         69          77          435     2                6                0
+  Alice       46          63          64        74         79          83          409     3                6                0
+  Frank       59          64          40        66         66          55          350     4                6                0
+    Bob       53          67          32        72         68          51          343     0                5                1
+  David       44          62          21        20          1          43          191     0                3                3
+    Eve       56          65          68        68         19          81          357     0                5                1
+ Hannah       22          67          27         3         34           3          156     0                1                5
+    Ivy       67          65          42        78         13          55          320     0                5                1
+   Jack       54          61           2        61         40          81          299     0                5                1
 
  Class Summary : Passed - 4, Failed - 6
 ```
