@@ -333,6 +333,22 @@ Charlie       57          97          69        66         69          77       
    Jack       54          61           2        61         40          81          299     0                5                1
 
  Class Summary : Passed - 4, Failed - 6
+
+Enter student name to view result (or type 'exit' to quit): frank
+
+Result for frank:
+
+ Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
+Frank       59          64          40        66         66          55          350     4                6                0
+
+Enter student name to view result (or type 'exit' to quit): Jack
+
+Result for Jack:
+
+Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
+Jack       54          61           2        61         40          81          299     0                5                1
+
+Enter student name to view result (or type 'exit' to quit): exit
 ```
 
 # What You Will Learn
