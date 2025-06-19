@@ -86,3 +86,17 @@ total = len(df)
 pass_count = (df['Subjects_Failed'] == 0).sum()
 fail_count = total - pass_count
 print(f"\n Class Summary : Passed - {pass_count}, Failed - {fail_count}")
+
+# Search for a student's result by name
+while True:
+    name = input("\nEnter student name to view result (or type 'exit' to quit): ").strip()
+    if name.lower() == 'exit':
+        break
+
+    student_row = final_df[final_df['Name'].str.lower() == name.lower()]
+    
+    if not student_row.empty:
+        print(f"\nResult for {name}:\n")
+        print(student_row.to_string(index=False))
+    else:
+        print(f"\nNo student found with the name: {name}")
