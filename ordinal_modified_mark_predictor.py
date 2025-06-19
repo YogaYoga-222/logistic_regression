@@ -46,7 +46,7 @@ for sub in subjects:
     pred_codes = pred_probs.values.argmax(axis=1)
     pred_grades = le.inverse_transform(pred_codes)
 
-    # 🔹 Convert grade to random mark from that range
+    # Convert grade to random mark from that range
     df[f'{sub}_T3'] = [random.randint(*grade_to_range[g]) for g in pred_grades]
 
 # Count passed/failed subjects
