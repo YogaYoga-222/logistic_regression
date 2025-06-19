@@ -317,36 +317,35 @@ Charlie          C             O            B+          B+           B+         
    Jack          C            B+             F          B+            D            A+                5                1
 ```
 ## Modified Mark and Pass/Fail Prediction
-```
- Final Predicted Marks, Ranks and Pass/Fail Summary:
+``` Final Predicted Marks, Ranks and Pass/Fail Summary:
 
    Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
-  Grace       72          91          79        71         77          85          475     1                6                0
-Charlie       57          97          69        66         69          77          435     2                6                0
-  Alice       46          63          64        74         79          83          409     3                6                0
-  Frank       59          64          40        66         66          55          350     4                6                0
-    Bob       53          67          32        72         68          51          343     0                5                1
-  David       44          62          21        20          1          43          191     0                3                3
-    Eve       56          65          68        68         19          81          357     0                5                1
- Hannah       22          67          27         3         34           3          156     0                1                5
-    Ivy       67          65          42        78         13          55          320     0                5                1
-   Jack       54          61           2        61         40          81          299     0                5                1
+  Grace       84          95          74        74         74          84          485     1                6                0
+  Alice       54          95          84        74         74          84          465     2                6                0
+Charlie       54          95          64        64         54          74          405     3                6                0
+    Bob       54          64          44        74         64          64          364     4                6                0
+  Frank       54          64          44        64         64          54          344     5                6                0
+  David       44          64          19        19         19          44          209     0                3                3
+    Eve       54          64          64        64         19          64          329     0                5                1
+ Hannah       19          64          19        19         19          19          159     0                1                5
+    Ivy       64          64          44        74         19          64          329     0                5                1
+   Jack       64          64          19        64         54          84          349     0                5                1
 
- Class Summary : Passed - 4, Failed - 6
+ Class Summary : Passed - 5, Failed - 5
 
-Enter student name to view result (or type 'exit' to quit): frank
+Enter student name to view result (or type 'exit' to quit): jack
 
-Result for frank:
-
- Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
-Frank       59          64          40        66         66          55          350     4                6                0
-
-Enter student name to view result (or type 'exit' to quit): Jack
-
-Result for Jack:
+Result for jack:
 
 Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
-Jack       54          61           2        61         40          81          299     0                5                1
+Jack       64          64          19        64         54          84          349     0                5                1
+
+Enter student name to view result (or type 'exit' to quit): Ivy
+
+Result for Ivy:
+
+Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
+ Ivy       64          64          44        74         19          64          329     0                5                1
 
 Enter student name to view result (or type 'exit' to quit): exit
 ```
