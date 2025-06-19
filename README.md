@@ -19,7 +19,7 @@ Each program is written in its own Python file for better clarity and organizati
 - `multinomial_academic_major_prediction.py`: Predict student’s academic major
 - `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance
 - `ordinal_marks_predictor.py` : Predict Term 3 subject grades using marks from Term 1 and 2 and show pass/fail summary
-- `ordinal_modified_mark_predictor.py`: 
+- `ordinal_modified_mark_predictor.py`:  Predict Term 3 marks using Term 1 and 2. Show total marks, how many subjects each student passed or failed, and give ranks only to students who passed all subjects.
 
 ---
 
@@ -106,6 +106,14 @@ Each program is written in its own Python file for better clarity and organizati
 - **Task**: Predict Term 3 grades for 6 subjects
 - **Goal**: Use ordinal logistic regression to convert marks to grades and count passed/failed subjects
 - **Note**: Confirm you loaded the Students_marks.csv in `ordinal_marks_predictor.py`
+
+---
+
+## 12. Modified Term 3 Mark and Rank Prediction
+- **Dataset**: Students_marks.csv with Term 1 and 2 marks
+- **Task**: This is a modified version of the previous grade prediction task. Instead of grades, it predicts actual marks for Term 3 in 6 subjects.
+- **Goal**: Use ordinal logistic regression to estimate marks, calculate total marks, count how many subjects each student passed or failed, and rank only the students who passed all subjects.
+- **Note**: Confirm you loaded the Students_marks.csv in ordinal_modified_mark_predictor.py
 
 ---
 
