@@ -1,15 +1,14 @@
 import pandas as pd
 import numpy as np
-import random
 from statsmodels.miscmodels.ordinal_model import OrderedModel
 from sklearn.preprocessing import LabelEncoder
 
-# Load your CSV file
+# Load CSV
 df = pd.read_csv("/home/stemland/Documents/Students_marks.csv")
 
 subjects = ['Math', 'Science', 'English', 'Tamil', 'Social', 'Physics']
 
-# Grade to mark range
+# Grade to mark range and average value
 grade_to_range = {
     'O': (90, 100),
     'A+': (80, 89),
@@ -20,10 +19,10 @@ grade_to_range = {
     'F': (0, 39)
 }
 
-# Set a random seed for reproducibility
-np.random.seed(42)
+# Get midpoint (average) mark of each grade range
+grade_to_avg = {grade: (low + high) // 2 for grade, (low, high) in grade_to_range.items()}
 
-# Convert numeric score to grade
+# Convert score to grade
 def marks_to_grade(m):
     if m >= 90: return 'O'
     elif m >= 80: return 'A+'
@@ -38,8 +37,10 @@ le = LabelEncoder()
 # Predict Term 3 marks using Ordinal Logistic Regression
 for sub in subjects:
     X = df[[f'{sub}_T1', f'{sub}_T2']]
-    actual_score = (0.4 * df[f'{sub}_T1'] + 0.6 * df[f'{sub}_T2']).round(1)
-
+    
+    # Use equal weights now (0.5 + 0.5)
+    actual_score = (0.5 * df[f'{sub}_T1'] + 0.5 * df[f'{sub}_T2']).round(1)
+    
     y_grades = actual_score.apply(marks_to_grade)
     y_encoded = le.fit_transform(y_grades)
 
@@ -50,8 +51,8 @@ for sub in subjects:
     pred_codes = pred_probs.values.argmax(axis=1)
     pred_grades = le.inverse_transform(pred_codes)
 
-    # Convert grade to random mark from that range
-    df[f'{sub}_T3'] = [np.random.randint(grade_to_range[g][0], grade_to_range[g][1] + 1) for g in pred_grades]
+    # Predict stable marks from grade average
+    df[f'{sub}_T3'] = [grade_to_avg[g] for g in pred_grades]
 
 # Count passed/failed subjects
 def pass_fail(row):
@@ -61,16 +62,16 @@ def pass_fail(row):
 
 df[['Subjects_Passed', 'Subjects_Failed']] = df.apply(pass_fail, axis=1)
 
-# Total marks
+# Total and Rank
 df['Total_Marks'] = df[[f'{s}_T3' for s in subjects]].sum(axis=1)
 
 # Assign rank only for fully passed students
-df['Rank'] = 0 
+df['Rank'] = 0
 passed_students = df[df['Subjects_Failed'] == 0].copy()
 passed_students['Rank'] = passed_students['Total_Marks'].rank(ascending=False, method='min').astype(int)
 df.update(passed_students)
 
-# Final output
+# Output
 output_cols = ['Name'] + [f'{s}_T3' for s in subjects] + ['Total_Marks', 'Rank', 'Subjects_Passed', 'Subjects_Failed']
 
 # Sort passed students by rank, add failed ones after
@@ -81,10 +82,9 @@ final_df = pd.concat([passed_df, failed_df])[output_cols]
 print("\n Final Predicted Marks, Ranks and Pass/Fail Summary:\n")
 print(final_df.to_string(index=False))
 
-# Class Summary
-total = len(df)
+# Class summary
 pass_count = (df['Subjects_Failed'] == 0).sum()
-fail_count = total - pass_count
+fail_count = len(df) - pass_count
 print(f"\n Class Summary : Passed - {pass_count}, Failed - {fail_count}")
 
 # Search for a student's result by name
