@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **Eleven Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Twelve Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -19,6 +19,7 @@ Each program is written in its own Python file for better clarity and organizati
 - `multinomial_academic_major_prediction.py`: Predict student’s academic major
 - `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance
 - `ordinal_marks_predictor.py` : Predict Term 3 subject grades using marks from Term 1 and 2 and show pass/fail summary
+- `ordinal_modified_mark_predictor.py`: 
 
 ---
 
@@ -153,6 +154,9 @@ python3 ordinal_grade_predictor.py
 ```
 ```bash
 python3 ordinal_marks_predicto.py
+```
+```bash
+python3 ordinal_modified_mark_predictor.py
 ```
 
 # Sample Output :
@@ -303,6 +307,24 @@ Charlie          C             O            B+          B+           B+         
  Hannah          F            B+             F           F            F             F                1                5
     Ivy         B+            B+             D           A            F             C                5                1
    Jack          C            B+             F          B+            D            A+                5                1
+```
+## Modified Mark and Pass/Fail Prediction
+```
+ Final Predicted Marks, Ranks and Pass/Fail Summary:
+
+   Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
+  Grace       74          90          79        73         78          85          479     1                6                0
+Charlie       53          95          63        67         66          74          418     2                6                0
+  Alice       43          65          66        70         76          85          405     3                6                0
+  Frank       51          63          42        61         69          58          344     4                6                0
+    Bob       54          69          21        72         67          55          338     0                5                1
+  David       39          67          36         1         29          47          219     0                2                4
+    Eve       54          60          63        66          6          89          338     0                5                1
+ Hannah       30          68           8        32         28          37          203     0                1                5
+    Ivy       60          68          40        73         20          56          317     0                5                1
+   Jack       53          64          23        64         44          86          334     0                5                1
+
+ Class Summary : Passed - 4, Failed - 6
 ```
 
 # What You Will Learn
