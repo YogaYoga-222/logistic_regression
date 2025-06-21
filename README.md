@@ -17,6 +17,7 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
 - `multinomial_predict_rating.py`: Predict vacation place ratings (1–5 stars)
 - `multinomial_academic_major_prediction.py`: Predict student’s academic major
+- `multinomial_house_quality_predictor.py`: Predict house quality as Basic, Average, or Premium using square footage, location score, and material quality.
 - `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance
 - `ordinal_marks_predictor.py` : Predict Term 3 subject grades using marks from Term 1 and 2 and show pass/fail summary
 - `ordinal_modified_mark_predictor.py`:  Predict Term 3 marks using Term 1 and 2. Show total marks, how many subjects each student passed or failed, and give ranks only to students who passed all subjects.
@@ -94,14 +95,22 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-### 10. Student Grade Prediction
+### 10. House Quality Rating Prediction
+-**Dataset**: house_quality.csv
+-**Target**: Predict the house quality as Basic, Average, or Premium
+_**Goal**: Use Multinomial Logistic Regression to predict the quality rating of a house based on features like Square Footage, Location Score, and Material Quality
+_**Note**: Ensure house_quality.csv is loaded in multinomial_house_quality.py
+
+---
+
+### 11. Student Grade Prediction
 - **Dataset**: Student marks and attendance
 - **Target**: Predict the grade (F to O)
 - **Goal**: Predict a student's grade using marks and attendance. If attendance is below 70%, the grade is 'F'. The model uses ordinal logistic regression to do this.
 
 ---
 
-### 11. Term 3 Grade and Pass/Fail Prediction
+### 12. Term 3 Grade and Pass/Fail Prediction
 - **Dataset**: Students_marks.csv with Term 1 and 2 marks
 - **Task**: Predict Term 3 grades for 6 subjects
 - **Goal**: Use ordinal logistic regression to convert marks to grades and count passed/failed subjects
@@ -109,7 +118,7 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-## 12. Modified Term 3 Mark and Rank Prediction
+## 13. Modified Term 3 Mark and Rank Prediction
 - **Dataset**: Students_marks.csv with Term 1 and 2 marks
 - **Task**: This is a modified version of the previous grade prediction task. Instead of grades, it predicts actual marks for Term 3 in 6 subjects.
 - **Goal**: Use ordinal logistic regression to estimate marks, calculate total marks, count how many subjects each student passed or failed, and rank only the students who passed all subjects.
@@ -165,6 +174,9 @@ python3 ordinal_marks_predicto.py
 ```
 ```bash
 python3 ordinal_modified_mark_predictor.py
+```
+```bash
+python3 multinomial_house_quality_predictor.py
 ```
 
 # Sample Output :
@@ -267,6 +279,36 @@ Classification Report:
     accuracy                           0.92       744
    macro avg       0.92      0.92      0.92       744
 weighted avg       0.92      0.92      0.92       744
+```
+## House Quality Rating Prediction
+```
+Classification Report:
+
+              precision    recall  f1-score   support
+
+     Average       1.00      1.00      1.00         2
+       Basic       1.00      1.00      1.00         2
+     Premium       1.00      1.00      1.00         1
+
+    accuracy                           1.00         5
+   macro avg       1.00      1.00      1.00         5
+weighted avg       1.00      1.00      1.00         5
+
+
+Correct Predictions:
+
+   Square_Footage  Location_Score  Material_Quality Actual_Quality Predicted_Quality
+0       -0.592218       -0.387298         -0.426872        Average           Average
+1       -1.371451       -1.678293         -1.682377          Basic             Basic
+2       -1.482770       -0.387298         -0.426872          Basic             Basic
+3       -0.035622       -0.387298          0.200881        Average           Average
+4        1.188888        1.549193          1.456386        Premium           Premium
+
+Wrong Predictions:
+
+Empty DataFrame
+Columns: [Square_Footage, Location_Score, Material_Quality, Actual_Quality, Predicted_Quality]
+Index: []
 ```
 ## Vacation Place Rating Prediction
 ```
