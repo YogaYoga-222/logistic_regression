@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **Twelve Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Thirteen Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
