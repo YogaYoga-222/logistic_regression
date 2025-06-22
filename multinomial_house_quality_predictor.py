@@ -52,13 +52,13 @@ print("\nConfusion Matrix:\n", confusion_matrix(actual_quality, predicted_qualit
 
 # Correct Predictions 
 correct_preds = test_results[test_results['Actual_Quality'] == test_results['Predicted_Quality']]
-print("\n Correct Predictions:\n")
+print("\nCorrect Predictions:\n")
 print(correct_preds)
 
 # Wrong Predictions 
 wrong_preds = test_results[test_results['Actual_Quality'] != test_results['Predicted_Quality']]
 if wrong_preds.empty:
-    print("\n No wrong predictions. Great job!\n")
+    print("\nNo wrong predictions. Great job!\n")
 else:
-    print("\n Wrong Predictions:\n")
+    print("\nWrong Predictions:\n")
     print(wrong_preds)
