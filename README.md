@@ -96,10 +96,10 @@ Each program is written in its own Python file for better clarity and organizati
 ---
 
 ### 10. House Quality Rating Prediction
--**Dataset**: house_quality.csv
--**Target**: Predict the house quality as Basic, Average, or Premium
-_**Goal**: Use Multinomial Logistic Regression to predict the quality rating of a house based on features like Square Footage, Location Score, and Material Quality
-_**Note**: Ensure house_quality.csv is loaded in multinomial_house_quality.py
+- **Dataset**: house_quality.csv
+- **Target**: Predict the house quality as Basic, Average, or Premium
+- **Goal**: Use Multinomial Logistic Regression to predict the quality rating of a house based on features like Square Footage, Location Score, and Material Quality
+- **Note**: Ensure house_quality.csv is loaded in multinomial_house_quality.py
 
 ---
 
@@ -294,6 +294,12 @@ Classification Report:
    macro avg       1.00      1.00      1.00         5
 weighted avg       1.00      1.00      1.00         5
 
+Accuracy: 1.0
+
+Confusion Matrix:
+ [[2 0 0]
+ [0 2 0]
+ [0 0 1]]
 
 Correct Predictions:
 
@@ -304,11 +310,7 @@ Correct Predictions:
 3       -0.035622       -0.387298          0.200881        Average           Average
 4        1.188888        1.549193          1.456386        Premium           Premium
 
-Wrong Predictions:
-
-Empty DataFrame
-Columns: [Square_Footage, Location_Score, Material_Quality, Actual_Quality, Predicted_Quality]
-Index: []
+No wrong predictions. Great job!
 ```
 ## Vacation Place Rating Prediction
 ```
