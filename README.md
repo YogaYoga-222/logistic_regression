@@ -1,6 +1,6 @@
 # Logistic Regression Projects
 
-This project includes **Thirteen Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
+This project includes **Fourteen Classification Problems** solved using **Logistic Regression** with the help of `scikit-learn`.
 
 Each program is written in its own Python file for better clarity and organization.
 
@@ -17,6 +17,7 @@ Each program is written in its own Python file for better clarity and organizati
 - `binary_introvert_vs_extrovert.py`: Predict if a person is introvert or extrovert based on personality traits
 - `multinomial_predict_rating.py`: Predict vacation place ratings (1–5 stars)
 - `multinomial_academic_major_prediction.py`: Predict student’s academic major
+- `multinomial_bank_customer_type.py`: Predict whether a customer is a Saver, Spender, or Investor based on monthly income, account balance, and number of transactions. Also allows real-time user input to predict new customer types interactively.
 - `multinomial_house_quality_predictor.py`: Predict house quality as Basic, Average, or Premium using square footage, location score, and material quality.
 - `ordinal_grade_predictor.py`: Predict students grade based on marks and attendance
 - `ordinal_marks_predictor.py` : Predict Term 3 subject grades using marks from Term 1 and 2 and show pass/fail summary
@@ -95,7 +96,11 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-### 10. House Quality Rating Prediction
+### 10. 
+
+---
+
+### 11. House Quality Rating Prediction
 - **Dataset**: house_quality.csv
 - **Target**: Predict the house quality as Basic, Average, or Premium
 - **Goal**: Use Multinomial Logistic Regression to predict the quality rating of a house based on features like Square Footage, Location Score, and Material Quality
@@ -103,14 +108,14 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-### 11. Student Grade Prediction
+### 12. Student Grade Prediction
 - **Dataset**: Student marks and attendance
 - **Target**: Predict the grade (F to O)
 - **Goal**: Predict a student's grade using marks and attendance. If attendance is below 70%, the grade is 'F'. The model uses ordinal logistic regression to do this.
 
 ---
 
-### 12. Term 3 Grade and Pass/Fail Prediction
+### 13. Term 3 Grade and Pass/Fail Prediction
 - **Dataset**: Students_marks.csv with Term 1 and 2 marks
 - **Task**: Predict Term 3 grades for 6 subjects
 - **Goal**: Use ordinal logistic regression to convert marks to grades and count passed/failed subjects
@@ -118,7 +123,7 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-## 13. Modified Term 3 Mark and Rank Prediction
+## 14. Modified Term 3 Mark and Rank Prediction
 - **Dataset**: Students_marks.csv with Term 1 and 2 marks
 - **Task**: This is a modified version of the previous grade prediction task. Instead of grades, it predicts actual marks for Term 3 in 6 subjects.
 - **Goal**: Use ordinal logistic regression to estimate marks, calculate total marks, count how many subjects each student passed or failed, and rank only the students who passed all subjects.
@@ -167,6 +172,12 @@ python3 multinomial_predict_rating.py
 python3 multinomial_academic_major_prediction.py
 ```
 ```bash
+python3 multinomial_bank_customer_type.py
+```
+```bash
+python3 multinomial_house_quality_predictor.py
+```
+```bash
 python3 ordinal_grade_predictor.py
 ```
 ```bash
@@ -174,9 +185,6 @@ python3 ordinal_marks_predicto.py
 ```
 ```bash
 python3 ordinal_modified_mark_predictor.py
-```
-```bash
-python3 multinomial_house_quality_predictor.py
 ```
 
 # Sample Output :
@@ -280,6 +288,34 @@ Classification Report:
    macro avg       0.92      0.92      0.92       744
 weighted avg       0.92      0.92      0.92       744
 ```
+## Bank Customer Type Prediction
+```
+Classification Report:
+
+              precision    recall  f1-score   support
+
+    Investor       0.75      0.75      0.75         4
+       Saver       0.50      1.00      0.67         1
+     Spender       1.00      0.50      0.67         2
+
+    accuracy                           0.71         7
+   macro avg       0.75      0.75      0.69         7
+weighted avg       0.79      0.71      0.71         7
+
+Accuracy: 0.7142857142857143
+
+Let's predict a new customer's type:
+Enter Monthly Income: 70000
+Enter Account Balance: 14000
+Enter Number of Monthly Transactions: 50
+
+Predicted Customer Type: Spender
+
+Prediction Confidence:
+Investor: 13.37%
+Saver: 3.30%
+Spender: 83.33%
+```
 ## House Quality Rating Prediction
 ```
 Classification Report:
@@ -361,7 +397,8 @@ Charlie          C             O            B+          B+           B+         
    Jack          C            B+             F          B+            D            A+                5                1
 ```
 ## Modified Mark and Pass/Fail Prediction
-``` Final Predicted Marks, Ranks and Pass/Fail Summary:
+```
+Final Predicted Marks, Ranks and Pass/Fail Summary:
 
    Name  Math_T3  Science_T3  English_T3  Tamil_T3  Social_T3  Physics_T3  Total_Marks  Rank  Subjects_Passed  Subjects_Failed
   Grace       84          95          74        74         74          84          485     1                6                0
