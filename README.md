@@ -96,15 +96,18 @@ Each program is written in its own Python file for better clarity and organizati
 
 ---
 
-### 10. 
-
+### 10. Bank Customer Type Prediction
+- **Dataset**: bank_customer_type.csv
+- **Target**: Predict if a person is a Saver, Spender, or Investor
+- **Goal**: To find the customer type based on Monthly Income, Account Balance, and Transactions and the program also allows entering new values to predict customer type
+- **Note**: Ensure bank_customer_type.csv is loaded in `multinomial_bank_customer_type.py`
 ---
 
 ### 11. House Quality Rating Prediction
 - **Dataset**: house_quality.csv
 - **Target**: Predict the house quality as Basic, Average, or Premium
 - **Goal**: Use Multinomial Logistic Regression to predict the quality rating of a house based on features like Square Footage, Location Score, and Material Quality
-- **Note**: Ensure house_quality.csv is loaded in multinomial_house_quality.py
+- **Note**: Ensure house_quality.csv is loaded in ``multinomial_house_quality.py`
 
 ---
 
@@ -127,7 +130,7 @@ Each program is written in its own Python file for better clarity and organizati
 - **Dataset**: Students_marks.csv with Term 1 and 2 marks
 - **Task**: This is a modified version of the previous grade prediction task. Instead of grades, it predicts actual marks for Term 3 in 6 subjects.
 - **Goal**: Use ordinal logistic regression to estimate marks, calculate total marks, count how many subjects each student passed or failed, and rank only the students who passed all subjects.
-- **Note**: Confirm you loaded the Students_marks.csv in ordinal_modified_mark_predictor.py
+- **Note**: Confirm you loaded the Students_marks.csv in `ordinal_modified_mark_predictor.py`
 
 ---
 
